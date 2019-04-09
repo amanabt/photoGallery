@@ -1,18 +1,17 @@
 
-title: Daniel Andrade Photo Gallery
-email: daniel@danielandrade.net
+title: Aman's Photo Gallery
+email: aman.iitk072@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  My own little photo gallery
+  My Photo Gallery
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://amanabt.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: dspillere
-github_username:  dansku
+github_username:  amanabt
 
 exclude: [node_modules, Gemfile, Gemfile.lock, gulpfile.js, deploy.sh, README.md, index.md, .gitignore]
 
 #--------------------------------------------
 gallery:
-  dir: photos
+  dir: assets/photos
   title: "Photos"
   sort_field: "date"
   title_prefix: "" 
@@ -23,7 +22,7 @@ gallery:
     
   # The following options are for individual galleries.
 gallery:
-  dir: photos
+  dir: assets/photos
   title: "Photos"
   sort_field: "date"
   thumbnail_size:
