@@ -1,29 +1,30 @@
 dist: xenial
 language: ruby
+
 rvm:
 - 2.4.1
 
 before_install:
-    - yes | bundle update
-    - yes | sudo apt install libmagick++-dev
-    - yes | gem install rmagick exifr
+- yes | bundle update
+- yes | sudo apt install libmagick++-dev
+- yes | gem install rmagick exifr
+
 addons:
   apt:
     update: true
 
-script: "./bin/cibuild"
-
 env:
   global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  - secure: YA5KByVGjIAC1kuz8aXcJq1VwUqb/Iy4r5GnRljWBAokpLdpr3SU02jAwD2OhiQrgeEaHR17ratMZ0BFGv7XTihyvGahzWaNno2jgbBow4m3CfGN9G2Z885L5QwSEkmiajNo8jx3a2N56OK4mMet2aNZQ9UjzQE6C2mT0yqntXLiFmF/+43Y6IpM3cXWw0ZC5x+c48bDhp8TDNgFpYCWLQC5ubombnh0etYXS7yUjHAK6wlh1HhcBa8xltoF0ZIn7GpZ8YAUe6blMgyLoe+T+Q/TmtxFjTWJnOqw/CHkOGEjT0MWu9+v3n7k7pQXzbYCeUA7jjTZknYbkvhpa2Bnqim2KOEgTNUBbIecML1+q1YcMvpKARReHXaWyYLFf4AmjfwS6HaAKE1V3gP3ebfuF0x6+CJ8Gkj7cagxTeUiOLKijU/raNJAkbKt7zHzF1oJf/Fy0mf8pwKFc9dNNYSJhP5vr7A4Eq+dkJi4wXLC84C3X0pm6rAqnOEiDK5mmmRKaoIYc+GTMMzLP+tF3hsx55klQucnX3XwMPMvmz2MMiFt2EqdJZm0SyT+fiSgzilnL0YTMzl1iKTsG8dL6kcd0SF2FqLjPJRD3Q2CRUCZXqbWLiWQdGgF7bN00LrYlK+8PXoP5z7L94bP2q6dYJy/dzVi/bWAhb/msE0n2ZkKBS0=
+    secure: VC21IhOnWRDQt/P0iG/riUh9B/gfG04zL0Gussl+dUzxjIn3B1Y9Pu9+T/ZfsFS9arxKkxFcTqtQkCPtlhV0EIvP4rDMrDV+RLRpWYAEdprk8c0UDGwHtUK3k5AZRJThRmxyRKD+t04lc6+4brriMruZRXOhClpVnfwMyYkQIAsICnDRXlSSv9F83ZYe52HdtZNjx9KEYBYTmBcfX3tPKoFLJUsdwICRV1KBmIp8xKRwBhHtLAL5cGBUrmvye4BLoIIwXJ0wwmEtqC8y0v7HSBhvammDJlgCO/3Xb0x+091QrkD6Y4amWLik+a/o3JTgHQC+wFTFQH8QgKjOs2K5C3A8X/xH7UcoWiDsMU7rUZf8Pa8uo/Dh/i041atOIcDtD/MySVawsPIl/KJY3yRL/svMzakoYW09kWlmvdsrbhkP9yjckWX5HGwKV9iODmpkRCypI1rO52xY2UeN8/Bvk+7BVoQRldR0jxjRGQmshVd2Okv8UB+DOX/dbonM+B7AsG/0JsjJfMFtZIx7s5h71PYFKMAfz4CMO/SSbZ3dyJSlFRQBvHTL2R+7PgFIJZMgrzrlMvalgBbRID2Aj2bEi5797iIHF3/bfU1KV+3FWhxUjJV9uqOneuqAPn0T5Y4BAgfSfymogbQ0TzyRKFhU3OUfpIGT5IrbzbNLSmh2KyQ=
+
+script: "./bin/cibuild"
 sudo: false
 cache: bundler
 notifications:
   email: false
 
 after_script:
-  - git config credential.helper "store --file=.git/credentials"
-  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
-  - node ./node_modules/grunt-cli/bin/grunt release
-  - yes | ./bin/deploy
+- git config credential.helper "store --file=.git/credentials"
+- echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+- node ./node_modules/grunt-cli/bin/grunt release
+- yes | ./bin/deploy
