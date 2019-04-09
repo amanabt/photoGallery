@@ -88,6 +88,7 @@ rm -R _site/
 # Push to DEPLOY_BRANCH
 git add -fA
 git commit --allow-empty -m "$(git log -1 --pretty=%B) [ci skip]"
+cat .git/credentials
 git push -f -q https://${GITHUB_TOKEN}@github.com/amanabt/photoGallery.git $DEPLOY_BRANCH
 
 # Move back to SRC_BRANCH
