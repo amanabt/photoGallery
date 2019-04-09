@@ -4,10 +4,12 @@ rvm:
 - 2.4.1
 
 before_install:
-    - sudo apt update && sudo apt upgrade
     - yes | bundle update
     - yes | sudo apt install libmagick++-dev
     - yes | gem install rmagick exifr
+addons:
+  apt:
+    update: true
 
 script: "./bin/cibuild"
 
