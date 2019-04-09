@@ -1,11 +1,12 @@
 
-title: Aman's Photo Gallery
+title: Aman's Gallery
 email: aman.iitk072@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   My Photo Gallery
 baseurl: "/photoGallery" # the subpath of your site, e.g. /blog
 url: "http://amanabt.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  amanabt
+logo: "/assets/photos/logo.png"
 
 exclude: [node_modules, Gemfile, Gemfile.lock, gulpfile.js, deploy.sh, README.md, index.md, .gitignore, vendor]
 
