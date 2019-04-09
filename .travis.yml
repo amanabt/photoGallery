@@ -1,6 +1,11 @@
 language: ruby
 rvm:
 - 2.4.1
+
+before_install:
+    - sudo apt install libmagick++-dev
+    - gem install rmagick exifr
+
 script: "./bin/cibuild"
 
 env:
