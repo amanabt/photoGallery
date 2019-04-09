@@ -3,7 +3,7 @@ title: Aman's Photo Gallery
 email: aman.iitk072@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   My Photo Gallery
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "photoGallery/assets/photos/" # the subpath of your site, e.g. /blog
 url: "http://amanabt.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  amanabt
 
