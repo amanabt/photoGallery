@@ -1,0 +1,44 @@
+
+title: Aman's Gallery
+email: aman.iitk072@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  My Photo Gallery
+baseurl: "/photoGallery" # the subpath of your site, e.g. /blog
+url: "http://amanabt.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  amanabt
+logo: "/assets/photos/logo.png"
+
+exclude: [node_modules, Gemfile, Gemfile.lock, gulpfile.js, deploy.sh, README.md, index.md, .gitignore, vendor]
+
+#--------------------------------------------
+gallery:
+  dir: assets/photos
+  title: "Photos"
+  sort_field: "date"
+  title_prefix: "" 
+  symlink: false            # false: copy images into _site. true: create symbolic links (saves disk space)
+  thumbnail_size:
+    y: 450
+    retina: 1.5
+    
+  # The following options are for individual galleries.
+gallery:
+  dir: assets/photos
+  title: "Photos"
+  sort_field: "date"
+  thumbnail_size:
+    y: 450
+    retina: 1.5
+  galleries:
+    Nainital-Hikes-2019-03:
+      name: "Nainital Trekking"
+      date: "2019/03/18"
+      best_image: 20190319_104928.jpg
+    Ganga-bairaj-kanpur-2019-02:
+      name: "Ganga Bairaj"
+      date: "2019/02/27"
+      best_image: 20190227_175016.jpg
+    Bithoor-2019:
+      name: "Bithoor Ghat"
+      date: "2019/02/23"
+      best_image: 20190223_174912.jpg
