@@ -7,7 +7,7 @@ baseurl: "/photoGallery" # the subpath of your site, e.g. /blog
 url: "http://amanabt.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  amanabt
 
-exclude: [node_modules, Gemfile, Gemfile.lock, gulpfile.js, deploy.sh, README.md, index.md, .gitignore]
+exclude: [node_modules, Gemfile, Gemfile.lock, gulpfile.js, deploy.sh, README.md, index.md, .gitignore, vendor]
 
 #--------------------------------------------
 gallery:
