@@ -1,6 +1,6 @@
 {% include header.html %}
 
-<a id="gallery-back" href="/photos">
+<a id="gallery-back" href="{{ '/assets/photos/' | prepend: site.baseurl | prepend: site.url }}">
   {% include svg_arrow_back.html %}
   <span>ALBUMS</span>
 </a>
