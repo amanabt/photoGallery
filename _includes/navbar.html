@@ -1,22 +1,19 @@
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-  <div class="container">
-    <a href="{{ site.url }}/" class="logo">
-      {% if site.logo %}
-      <img src="{{ site.logo | prepend: site.baseurl }}" alt="{{ site.title }}">
-      {% else %}
-      <span>{{ site.title }}</span>
-      {% endif %}
-    </a>
-    <a class="navbar-brand" href="{{ site.url }}">{{ site.title | escape }}</a>
+<input id="navbar-indicator" class="navbar-collapse" type="checkbox" checked>
+      <nav class="navbar">
+          <a class="navbar-brand" href="{{ site.url }}">
+               {% if site.logo %}
+                   <img src="{{ site.logo | prepend: site.baseurl }}" alt="{{ site.title }}">
+               {% else %}
+                   <span>{{ site.title }}</span>
+               {% endif %}
+         </a>
 
-    <div>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="{{ site.url }}">Homepage</a>
-        </li>
-        </li>
-      </ul>
-    </div>
-  </div>
+         <div class="navbar-right">
+             <a class="nav-link" href="{{ site.url }}">Homepage</a>
+             <a class="nav-link" href="{{ "/blog" | prepend: site.url }}">Blog</a>
+         </div>
+
+         <label class="navbar-toggler" for="navbar-indicator">
+            +
+         </label>
 </nav>

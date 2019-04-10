@@ -2,9 +2,6 @@
 {% include navbar.html %}
 
 <br>
-<br>
-<br>
-<br>
 
 <div id="gallery-list">
   
@@ -16,8 +13,8 @@
           background-size: cover;"></div>
       </div>
       <div class="container">
-        <span class="title" style="color:#1C1F26">{{ gallery["name"] }}</span>
-        <span class="date" style="color:#1C1F26">{{ gallery["date"] | date: "%Y" }}</span>
+        <span class="title">{{ gallery["name"] }}</span>
+        <span class="date">{{ gallery["date"] | date: "%Y" }}</span>
       </div>
     </a>
   {% endfor %}

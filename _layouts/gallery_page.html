@@ -1,11 +1,5 @@
 {% include header.html %}
 
-<style>
-body {
-    background-color: #1C1F26;
-}
-</style>
-
 <a id="gallery-back" href="{{ '/assets/photos/' | prepend: site.baseurl | prepend: site.url }}">
   {% include svg_arrow_back.html %}
   <span>ALBUMS</span>
@@ -13,7 +7,7 @@ body {
 
 <h1 id="gallery-header">
   <div class="container">
-    <a href="/{{ site.gallery.dir }}/{{ page.gallery }}" style="color:white">{{ page.title }}</a>
+      <a href="{{ site.gallery.dir }}/{{ page.gallery }}" style="color:white">{{ page.title }}</a>
     <span class="date" style="color:white">{{ page.date | date: "%Y" }}</span>
   </div>
   <img id="bg-loader" src="thumbs/{{ page.blur_image }}">
