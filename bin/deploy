@@ -88,7 +88,16 @@ rm -R _site/
 # Push to DEPLOY_BRANCH
 git add -fA
 git commit --allow-empty -m "$(git log -1 --pretty=%B) [ci skip]"
-git push -f -q https://${GITHUB_TOKEN}@github.com/amanabt/photoGallery.git $DEPLOY_BRANCH
+
+if [ "$USER" == "travis" ]
+then
+    echo "Deploying from TravisCI"
+    git push -f -q https://${GITHUB_TOKEN}@github.com/amanabt/photoGallery.git $DEPLOY_BRANCH
+else
+    echo "Deploying from PC"
+    git push -f -q https://github.com/amanabt/photoGallery.git $DEPLOY_BRANCH
+
+fi
 
 # Move back to SRC_BRANCH
 git checkout $SRC_BRANCH
