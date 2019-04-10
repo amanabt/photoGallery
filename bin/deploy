@@ -95,7 +95,7 @@ then
     git push -f -q https://${GITHUB_TOKEN}@github.com/amanabt/photoGallery.git $DEPLOY_BRANCH
 else
     echo "Deploying from PC"
-    git push -f -q https://github.com/amanabt/photoGallery.git $DEPLOY_BRANCH
+    git push -f -q origin $DEPLOY_BRANCH
 
 fi
 
