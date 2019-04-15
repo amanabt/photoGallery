@@ -9,6 +9,11 @@ url: "http://amanabt.github.io" # the base hostname & protocol for your site, e.
 github_username:  amanabt
 logo: "/assets/photos/logo.png"
 
+# Plug-ins
+plugins:
+    - jekyll-sitemap
+
+
 exclude: [node_modules, Gemfile, Gemfile.lock, gulpfile.js, deploy.sh, README.md, index.md, .gitignore, vendor]
 
 #--------------------------------------------
