@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang=en>
+<head>
+  <meta charset="utf-8">
+  <title>Photos</title>
+
+  <meta name="viewport" content="
+    width=device-width,
+    user-scalable=no,
+    initial-scale=1,
+    minimum-scale=1,
+    maximum-scale=1">
+
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,900' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.4/jquery.lazy.min.js"></script>
+  <link rel="stylesheet" href="//danielandrade.net/gallery.css">
+
+  <link rel="stylesheet" href="/photoGallery/assets/css/topnav.css">
+
+</head>
+<body>
+  
+<script type="text/javascript">
+   $(function() {
+        $('.lazy').lazy({
+          effect: "fadeIn",
+          effectTime: 2000,
+          threshold: 0
+        });
+    });
+</script>
+
+<svg class="shadow">
+  <defs>
+    <filter id="shadow">
+      <feOffset result="offOut" in="SourceAlpha" dy="2" />
+      <feBlend in="SourceGraphic" in2="offOut" mode="normal" />
+    </filter>
+  </defs>
+</svg>
+
+<input id="navbar-indicator" class="navbar-collapse" type="checkbox" checked>
+      <nav class="navbar">
+          <a class="navbar-brand" href="https://amanabt.github.io">
+               
+                   <img src="/photoGallery/assets/photos/logo.png" alt="Aman's Gallery">
+               
+         </a>
+
+         <div class="navbar-right">
+             <a class="nav-link" href="https://amanabt.github.io">Homepage</a>
+             <a class="nav-link" href="https://amanabt.github.io/blog">Blog</a>
+         </div>
+
+         <label class="navbar-toggler" for="navbar-indicator">
+            +
+         </label>
+</nav>
+
+
+<br>
+
+<div id="gallery-list">
+  
+  
+  <a href="Nainital-Hikes-2019-08">
+      <div class="img-container">
+        <div class="img" style="
+          background: url('Nainital-Hikes-2019-08/thumbs/IMG_20190811_124441.jpg') no-repeat center center;
+          background-size: cover;"></div>
+      </div>
+      <div class="container">
+        <span class="title">Nainital Trek</span>
+        <span class="date">2019</span>
+      </div>
+    </a>
+  
+  <a href="Bithoor-2-2019">
+      <div class="img-container">
+        <div class="img" style="
+          background: url('Bithoor-2-2019/thumbs/20190429_055955.jpg') no-repeat center center;
+          background-size: cover;"></div>
+      </div>
+      <div class="container">
+        <span class="title">Bithoor Ghat (Morning)</span>
+        <span class="date">2019</span>
+      </div>
+    </a>
+  
+  <a href="Nainital-Hikes-2019-03">
+      <div class="img-container">
+        <div class="img" style="
+          background: url('Nainital-Hikes-2019-03/thumbs/20190319_104928.jpg') no-repeat center center;
+          background-size: cover;"></div>
+      </div>
+      <div class="container">
+        <span class="title">Nainital Trekking</span>
+        <span class="date">2019</span>
+      </div>
+    </a>
+  
+  <a href="Ganga-bairaj-kanpur-2019-02">
+      <div class="img-container">
+        <div class="img" style="
+          background: url('Ganga-bairaj-kanpur-2019-02/thumbs/20190227_175016.jpg') no-repeat center center;
+          background-size: cover;"></div>
+      </div>
+      <div class="container">
+        <span class="title">Ganga Bairaj</span>
+        <span class="date">2019</span>
+      </div>
+    </a>
+  
+  <a href="Bithoor-2019">
+      <div class="img-container">
+        <div class="img" style="
+          background: url('Bithoor-2019/thumbs/20190223_174912.jpg') no-repeat center center;
+          background-size: cover;"></div>
+      </div>
+      <div class="container">
+        <span class="title">Bithoor Ghat</span>
+        <span class="date">2019</span>
+      </div>
+    </a>
+  
+  
+</div>
+
+<script src="//danielandrade.net/gallery.js"></script>
+
+</body>
+
+</html>
+
